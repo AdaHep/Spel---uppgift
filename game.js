@@ -1,20 +1,23 @@
+
+//Globala variablar
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 
-let state = {}
 
+//Funktionen körs när sidan laddats.
 function startGame() {
-    state = {}
     showTextNode(1)
 }
 
+// Denna funktion innehåller nästan all funktionalitet för att köra spelet.
+// Första delen definerar hur själva speltexten tas fram och ändras när man gör val
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
-
+//Koden nedan reglerar vad knapparna visar
     textNode.options.forEach(option => {
         if (showOption(option)) {
             const button = document.createElement('button')
@@ -30,14 +33,16 @@ function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
 }
 
+// Funktion för att knapparna ska fungera. 
 function selectOption(option) {
     const nextTextNodeId = option.nextText
-    // if (nextTextNodeId <= 0) {
-    //     return startGame()
-    // }
     showTextNode(nextTextNodeId)
 }
 
+
+
+// Denna variabel innehåller en array med flera andra arrayer i den för att kunna göra varje scen och deras alternativ. 
+// Varje scen har fått ett id vilket gör det väldigt enkelt att välja vart valen ska leda. 
 const textNodes = [
     {
         id: 1,
