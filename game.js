@@ -98,13 +98,13 @@ const textNodes = [
             },
             {
                 text: 'Sitt kvar som en idiot',
-                nextText: 20
+                nextText: 48
             }
         ]
     },
     {
         id: 6,
-        text: 'Du kollar på kassörskan och hon frågar om du har nummerlapp?',
+        text: 'Välkommen, har du tagit nummerlapp?',
         options: [
             {
                 text: 'Ja',
@@ -118,7 +118,7 @@ const textNodes = [
     },
     {
         id: 7,
-        text: 'Då är det din tur nu! Vad är du här för?',
+        text: 'Så bra! Då är det din tur nu! Vad vill du ha hjälp med?',
         options: [
             {
                 text: 'Service',
@@ -137,7 +137,8 @@ const textNodes = [
             {
                 text: 'Lyd',
                 nextText: 5
-            }
+            },
+        ]
     },
     {
         id: 9,
@@ -165,11 +166,11 @@ const textNodes = [
         options: [
             {
                 text: 'Andas djupt och meditera',
-                nextText: 11
+                nextText: 12
             },
             {
                 text: 'Läs verkstadstidningar',
-                nextText: 16
+                nextText: 12
             }
         ]
     },
@@ -179,31 +180,31 @@ const textNodes = [
         options: [
             {
                 text: 'Skönt, jag hatar pengar!',
-                nextText: 14
+                nextText: 13
             },
             {
                 text: 'Ajdå, jag har inga pengar..',
-                nextText: 12
+                nextText: 14
             }
         ]
     },
     {
         id: 13,
-        text: 'Det var tråkigt att höra, följ med här!',
-        options: [
-            {
-                text: 'Följ med',
-                nextText: 49
-            }
-        ]
-    },
-    {
-        id: 14,
         text: 'Du tar ett djupt andetag och går fram till kassan igen.',
         options: [
             {
                 text: 'Gå fram',
                 nextText: 15
+            }
+        ]
+    },
+    {
+        id: 14,
+        text: 'Det var tråkigt att höra, följ med här!',
+        options: [
+            {
+                text: 'Följ med',
+                nextText: 49
             }
         ]
     },
@@ -216,8 +217,8 @@ const textNodes = [
                 nextText: 16
             },
             {
-                text: 'Klarna',
-                nextText: 16
+                text: 'Cash',
+                nextText: 19
             }
         ]
     },
@@ -227,11 +228,11 @@ const textNodes = [
         options: [
             {
                 text: 'Blipp',
-                nextText: 16
+                nextText: 17
             },
             {
                 text: 'Stoppa in kortet',
-                nextText: 18,
+                nextText: 18
             }
         ]
     },
@@ -241,13 +242,17 @@ const textNodes = [
         options: [
             {
                 text: 'Ja tack',
-                nextText: 19,
+                nextText: 47
+            },
+            {
+                text: 'Nej tack',
+                nextText: 47
             }
         ]
     },
     {
         id: 18,
-        text: 'Vad god blippa',
+        text: 'Inget stöd för chip - var god blippa',
         options: [
             {
                 text: 'Blippa',
@@ -257,6 +262,16 @@ const textNodes = [
     },
     {
         id: 19,
+        text: 'Cash alltså, du är en riktig storfräsare',
+        options: [
+            {
+                text: 'Prassla med plånkan',
+                nextText: 17
+            }
+        ]
+    },
+    {
+        id: 47,
         text: 'Jag kan se här att nästa gång blir det ännu dyrare. KUL! Ha det så bra',
         options: [
             {
