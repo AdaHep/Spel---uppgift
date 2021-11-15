@@ -32,9 +32,9 @@ function showOption(option) {
 
 function selectOption(option) {
     const nextTextNodeId = option.nextText
-    if (nextTextNodeId <= 0) {
-        return startGame()
-    }
+    // if (nextTextNodeId <= 0) {
+    //     return startGame()
+    // }
     showTextNode(nextTextNodeId)
 }
 
@@ -58,7 +58,7 @@ const textNodes = [
                 nextText: 3
             },
             {
-                text: 'Sätter dig ner direkt och väntar',
+                text: 'Sätter dig ner direkt och vänta',
                 nextText: 3
             }
         ]
@@ -90,15 +90,15 @@ const textNodes = [
     },
     {
         id: 5,
-        text: 'Du fort sätter vänta....',
+        text: 'Du fortsätter vänta....',
         options: [
             {
                 text: 'Snea och stega fram till kassan',
-                nextText: 7
+                nextText: 6
             },
             {
                 text: 'Sitt kvar som en idiot',
-                nextText: 8
+                nextText: 20
             }
         ]
     },
@@ -107,21 +107,8 @@ const textNodes = [
         text: 'Du kollar på kassörskan och hon frågar om du har nummerlapp?',
         options: [
             {
-                text: 'Dricka kaffe',
-                nextText: 7
-            },{
-                text: 'Det är dags för service',
-                nextText: 
-            }
-        ]
-    },
-    {
-        id: 7,
-        text: 'Då är det din tur nu! Vad är du här för?',
-        options: [
-            {
                 text: 'Ja',
-                nextText: 6
+                nextText: 7
             },
             {
                 text: 'Nej',
@@ -130,22 +117,191 @@ const textNodes = [
         ]
     },
     {
-        id: 8,
-        text: 'Du satt där hela dagen utan och väntade. Nu stänger verkstaden och du får åka hem igen.',
+        id: 7,
+        text: 'Då är det din tur nu! Vad är du här för?',
         options: [
             {
-                text: 'Åk hem och försök igen nästa dag',
-                nextText: 2
+                text: 'Service',
+                nextText: 9
+            },
+            {
+                text: 'Dricka kaffe',
+                nextText: 10
+            }
+        ]
+    },
+    {
+        id: 8,
+        text: 'Vem tror du att du är? Ta en nummerlapp och vänta på din tur',
+        options: [
+            {
+                text: 'Lyd',
+                nextText: 5
+            }
+    },
+    {
+        id: 9,
+        text: 'Då har du kommit rätt. Du kan ge mig dina bilnycklar så hämtar mekanikern dig när det är färdigt',
+        options: [
+            {
+                text: 'Sätt dig igen',
+                nextText: 11
+            }
+        ]
+    },
+    {
+        id: 10,
+        text: 'Varsegod, kaffet är gratis. Hoppas det smakar',
+        options: [
+            {
+                text: 'Hämta mera kaffe',
+                nextText: 5
             }
         ]
     },
     {
         id: 11,
-        text: '',
+        text: 'Du sätter dig igen och väntar',
+        options: [
+            {
+                text: 'Andas djupt och meditera',
+                nextText: 11
+            },
+            {
+                text: 'Läs verkstadstidningar',
+                nextText: 16
+            }
+        ]
+    },
+    {
+        id: 12,
+        text: 'Plötsligt kommer mekanikern med dina nycklar. "Hej min herre, det blir ingen billig historia detta"',
+        options: [
+            {
+                text: 'Skönt, jag hatar pengar!',
+                nextText: 14
+            },
+            {
+                text: 'Ajdå, jag har inga pengar..',
+                nextText: 12
+            }
+        ]
+    },
+    {
+        id: 13,
+        text: 'Det var tråkigt att höra, följ med här!',
+        options: [
+            {
+                text: 'Följ med',
+                nextText: 49
+            }
+        ]
+    },
+    {
+        id: 14,
+        text: 'Du tar ett djupt andetag och går fram till kassan igen.',
+        options: [
+            {
+                text: 'Gå fram',
+                nextText: 15
+            }
+        ]
+    },
+    {
+        id: 15,
+        text: 'Hej igen. Det var stora servicen idag ja.. Den kommer landa på 48 976:-. Betalar du med kort eller klarna? ',
+        options: [
+            {
+                text: 'Kort',
+                nextText: 16
+            },
+            {
+                text: 'Klarna',
+                nextText: 16
+            }
+        ]
+    },
+    {
+        id: 16,
+        text: 'Varsegod här *sträcker fram kortterminalen*',
+        options: [
+            {
+                text: 'Blipp',
+                nextText: 16
+            },
+            {
+                text: 'Stoppa in kortet',
+                nextText: 18,
+            }
+        ]
+    },
+    {
+        id: 17,
+        text: 'Tack så mycket, vill du ha kvitto?',
+        options: [
+            {
+                text: 'Ja tack',
+                nextText: 19,
+            }
+        ]
+    },
+    {
+        id: 18,
+        text: 'Vad god blippa',
+        options: [
+            {
+                text: 'Blippa',
+                nextText: 17
+            }
+        ]
+    },
+    {
+        id: 19,
+        text: 'Jag kan se här att nästa gång blir det ännu dyrare. KUL! Ha det så bra',
+        options: [
+            {
+                text: '*Vink*Vink*',
+                nextText: 51
+            }
+        ]
+    },
+    {
+        id: 48,
+        text: 'Du satt visst och väntade hela dagen utan att få hjälp. Nu stänger verkstaden och du får gå hem.',
+        options: [
+            {
+                text: 'Adjö',
+                nextText: 50
+            }
+        ]
+    },
+    {
+        id: 49,
+        text: 'Mekanikern sneade och misshandlade dig i källaren',
+        options: [
+            {
+                text: 'R.I.P',
+                nextText: 50
+            }
+        ]
+    },
+    {
+        id: 50,
+        text: 'Tråkigt slut hörru. Jag förstår att detta kan vara svårt men försök igen!',
+        options: [
+            {
+                text: 'Försök igen?',
+                nextText: 1
+            }
+        ]
+    },
+    {
+        id: 51,
+        text: 'BRA JOBBAT!!!! Du klarade dig igenom servicen utan problem',
         options: [
             {
                 text: 'Spela igen?',
-                nextText: -1
+                nextText: 1
             }
         ]
     }
