@@ -78,7 +78,6 @@ const textNodes = [
             },
             {
                 text: 'Nej tack, verkstads-köpp är inget för mig!',
-
                 nextText: 5
             },
         ]
