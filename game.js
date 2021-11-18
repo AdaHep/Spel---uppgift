@@ -4,7 +4,7 @@ const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 
 
-//Funktionen körs när sidan laddats.
+//Funktionen körs när sidan laddats. Startar spelet och visar första "sidan"
 function startGame() {
     showTextNode(1)
 }
@@ -17,7 +17,7 @@ function showTextNode(textNodeIndex) {
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
-//Koden nedan reglerar vad knapparna visar
+//Koden nedan reglerar vad knapparna visar och skapar nya knappar baserat på alternativen jag kodat nedanför. 
     textNode.options.forEach(option => {
         if (showOption(option)) {
             const button = document.createElement('button')
