@@ -46,7 +46,7 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Välkommen! I denna interaktiva upplevelse kommer du att serva din bil på verkstaden!',
+        text: 'Välkommen! I denna interaktiva upplevelse kommer du att serva din bil på verkstaden. Du kommer att få göra olika val och väljer du fel kan det gå illa.',
         options: [
             {
                 text: 'Kör igång!',
@@ -73,18 +73,18 @@ const textNodes = [
         text: 'Du sätter dig och väntar. I hörnet står en kaffeautomat och blänker. Är du kanske sugen på en köpp?',
         options: [
             {
-                text: 'Jag tackar aldrig nej till en verkstads-köpp',
+                text: 'Jag tackar aldrig nej till en verkstadsköpp',
                 nextText: 4
             },
             {
-                text: 'Nej tack, verkstads-köpp är inget för mig!',
+                text: 'Nej tack, verkstadsköpp är inget för mig!',
                 nextText: 5
             },
         ]
     },
     {
         id: 4,
-        text: 'Du tar din verkstads-köpp (gött) och sätter dig och väntar på din tur',
+        text: 'Du tar din verkstadsköpp (gött) och sätter dig och väntar på din tur',
         options: [
             {
                 text: 'Vänta vänta vänligen',
@@ -149,7 +149,7 @@ const textNodes = [
         text: 'Då har du kommit rätt. Du kan ge mig dina bilnycklar så hämtar mekanikern dig när det är färdigt',
         options: [
             {
-                text: 'Sätt dig igen',
+                text: 'Lämna över nycklarna och sätt dig igen',
                 nextText: 11
             }
         ]
@@ -214,7 +214,7 @@ const textNodes = [
     },
     {
         id: 15,
-        text: 'Hej igen. Det var stora servicen idag ja.. Den kommer landa på 48 976:-. Betalar du med kort eller klarna? ',
+        text: 'Hej igen. Det var stora servicen idag ja.. Den kommer landa på 48 976:-. Betalar du med kort eller cash? ',
         options: [
             {
                 text: 'Kort',
@@ -256,7 +256,7 @@ const textNodes = [
     },
     {
         id: 18,
-        text: 'Inget stöd för chip - var god blippa',
+        text: 'Inget stöd - var god blippa',
         options: [
             {
                 text: 'Blippa',
@@ -276,7 +276,7 @@ const textNodes = [
     },
     {
         id: 47,
-        text: 'Jag kan se här att nästa gång blir det ännu dyrare. KUL! Ha det så bra',
+        text: 'Jag kan se här att nästa gång blir det ännu dyrare. KUL. Ha det så bra!',
         options: [
             {
                 text: '*Vink*Vink*',
@@ -286,7 +286,7 @@ const textNodes = [
     },
     {
         id: 48,
-        text: 'Du satt visst och väntade hela dagen utan att få hjälp. Nu stänger verkstaden och du får gå hem.',
+        text: 'Du satt och väntade hela dagen utan att få hjälp. Nu stänger verkstaden och du får gå hem.',
         options: [
             {
                 text: 'Adjö',
