@@ -1,13 +1,23 @@
 
 //Globala variablar
-const textElement = document.getElementById('text')
-const optionButtonsElement = document.getElementById('option-buttons')
-
+const textElement = document.getElementById('text');
+const optionButtonsElement = document.getElementById('option-buttons');
+const nameOfPlayer = prompt ('Vad heter du?');
 
 //Funktionen körs när sidan laddats. Startar spelet och visar första "sidan"
 function startGame() {
-    showTextNode(1)
+    playerName();
+    showTextNode(1);
 }
+
+
+
+//Prompt för att fråga om spelarens namn
+function playerName(){
+    alert ('Hej ' + nameOfPlayer + ", nu kör viiiiii!");
+}
+
+
 
 // Denna funktion innehåller nästan all funktionalitet för att köra spelet.
 // Första delen definerar hur själva speltexten tas fram och ändras när man gör val
@@ -306,7 +316,7 @@ const textNodes = [
     },
     {
         id: 50,
-        text: 'Tråkigt slut hörru. Jag förstår att detta kan vara svårt men försök igen!',
+        text: 'Tråkigt slut. Jag förstår att detta kan vara svårt men försök igen!',
         options: [
             {
                 text: 'Försök igen?',
